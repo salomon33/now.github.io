@@ -1,0 +1,511 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppis', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background:  linear-gradient(to right, #1f242d,#323946, #0ef);
+    color: var(--text-color);  
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+} 
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: 3s;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/*section accueille*/
+
+.accueille {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueille-img img {
+    width: 35vw;
+    border-radius: 5%;
+}
+
+.accueille-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.accueille-content p {
+    font-size: 1.6rem;
+}
+#congratulations {
+    color: var(--main-color);
+}
+
+/*section cours*/
+
+.cours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(to right, #1f242d,#323946, #0ef);
+}
+
+.cours-img img {
+    width: 35vw;
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.cours-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.cours-content h3 {
+    font-size: 2.6rem;
+}
+
+.cours-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/*section pratique*/
+
+
+.pratique h2 {
+    margin-bottom: 5rem;
+}
+
+.pratique-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.pratique-container .pratique-box {
+    flex: 1 1 30rem;
+    background: linear-gradient(to right, #1f242d,#323946, #0ef);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.pratique-container .pratique-box:hover {
+    border-color: var(--main-color);
+    transform:  scale(1.02);
+}
+
+.pratique-box h3 {
+    font-size: 2.6rem;
+}
+
+.pratique-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+
+}
+
+#a {
+    background: var(--main-color);
+    border-radius: 15%;
+}
+
+/*section partenaire*/
+
+
+.partenaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partenaire-img img {
+    height: 415px;
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.partenaire-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.partenaire-content p {
+    font-size: 1.6rem;
+}
+#congratulations {
+    color: var(--main-color);
+}
+
+#b {
+color: red;
+text-align: center;
+}
+
+/*section DEVELOPEUR*/
+
+
+.DEVELOPEUR {
+    background-color: linear-gradient(to right, #1f242d,#323946, #0ef);;
+} 
+
+.DEVELOPEUR h2 {
+    margin-bottom: 4rem;
+}
+
+.DEVELOPEUR-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+} 
+.DEVELOPEUR-container .DEVELOPEUR-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+#DEV {
+    height: 180px;
+}
+
+.DEVELOPEUR-box img {
+    width: 50%;
+    transition: .5s ease;
+}
+
+.DEVELOPEUR-box:hover img {
+    transform: scale(1.1);
+}
+
+.DEVELOPEUR-box .DEVELOPEUR-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.DEVELOPEUR-box:hover .DEVELOPEUR-layer {
+    transform: translateY(0);
+}
+
+.DEVELOPEUR-layer h4 {
+    font-size: 3rem;
+}
+.DEVELOPEUR-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.DEVELOPEUR-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* je vais adapter mon site a n'inporte quel ecran*/
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding:  2rem 3%;
+    }
+
+     section {
+    padding:  10rem 3% 2rem;
+ }
+
+    .pratique {
+        padding-bottom: 7rem; 
+    }
+     
+
+    .DEVELOPEUR {
+        padding-bottom: 7rem; 
+    }
+ 
+    .partenaire {
+        min-height: auto;
+    }
+
+    .footer {
+     padding: 2rem 3%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 100%;
+         padding: 1rem 3%;
+         background: var(--bg-color);
+         border-top: .1rem solid rgba(0, 0, 0, .2);
+         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+
+    .accueille {
+      flex-direction: column;
+ }
+
+    .accueille-content h3 {
+      font-size: 2.6rem;
+ }
+
+    .accueille-content h1 {
+      font-size: 5rem;
+ }
+
+    .accueille-img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .cours {
+        flex-direction: column;
+    }
+    .cours img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    
+    .pratique h2 {
+        margin-bottom: 3rem;
+    }
+
+    .DEVELOPEUR h2 {
+        margin-bottom: 3rem;
+    }
+
+    .DEVELOPEUR-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 617px) {
+        .DEVELOPEUR-container {
+            grid-template-columns: 1fr;
+        }
+    } 
+} 
+
+@media (max-width: 365px) {
+    .accueille-img  img {
+        width: 90vw;
+    }
+
+     .cours-img img {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+/* je vais adapter mon site avec la luminsite */
+
+.input {
+    visibility: hidden;
+
+}
+
+.label {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 34px;
+    background: linear-gradient(to right, #1f242d,#323946, #0ef);
+    height: 34px;
+    border-radius: 50%;
+    top: 3px;
+    position: absolute;
+    left: 3px;
+    animation: toggleOff .4s linear forwards;
+}
+
+.input:checked + .label {
+    background-color:  linear-gradient(to right, #1f242d,#323946, #0ef);
+}
+
+.input:checked + .label .circle{
+    animation: toggleOn .4s linear forwards;
+    background-color: linear-gradient(to right, #1f242d,#323946, #0ef);
+
+}
+
+@keyframes toggleOn {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(40px);
+    }
+
+}
+
+@keyframes toggleOff {
+    0%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+
+#lu {
+    color: var(--text-color);
+    font-weight: 600;
+}
